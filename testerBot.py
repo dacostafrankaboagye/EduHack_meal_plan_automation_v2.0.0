@@ -34,16 +34,16 @@ searchBox = driver.find_element_by_xpath('//*[@id="side"]/div[1]/div/label/div/d
 searchBox.send_keys(contact)
 searchBox.send_keys(Keys.ENTER)
 
+time.sleep(5)
 driver.implicitly_wait(5)
-msg = '@Frank\nAutomating\n..Testing_Meal_Bot..\n'
+msg = '..Testing_Meal_Bot..'
 msg_box = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 msg_box.send_keys(msg)
 msg_box.send_keys(Keys.ENTER)
 
 
-
 print('DONE')
-
+driver.close()
 
 
 
